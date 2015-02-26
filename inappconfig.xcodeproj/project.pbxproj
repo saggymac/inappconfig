@@ -7,9 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD06ADF41A82543A006EF249 /* IACPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06ADF31A82543A006EF249 /* IACPickerViewController.swift */; };
+		CD0A6BBC1A81AF9500C2E786 /* Top.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0A6BBB1A81AF9500C2E786 /* Top.plist */; };
+		CD0A6BBE1A81B17900C2E786 /* ChildSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0A6BBD1A81B17900C2E786 /* ChildSettings.plist */; };
 		CD7C119B1A8059C1004D06CA /* inappconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7C119A1A8059C1004D06CA /* inappconfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD7C11A11A8059C1004D06CA /* inappconfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7C11951A8059C1004D06CA /* inappconfig.framework */; };
 		CD7C11A81A8059C1004D06CA /* inappconfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C11A71A8059C1004D06CA /* inappconfigTests.swift */; };
+		CD7C11B21A8059F4004D06CA /* IACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C11B11A8059F4004D06CA /* IACViewController.swift */; };
+		CD7C11B41A805A07004D06CA /* IAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C11B31A805A07004D06CA /* IAC.storyboard */; };
+		CD7C11B61A805AEC004D06CA /* SettingsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C11B51A805AEC004D06CA /* SettingsDataSource.swift */; };
+		CD7C11B81A805C1F004D06CA /* SettingsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C11B71A805C1F004D06CA /* SettingsLoader.swift */; };
+		CDAC80A31A81080A0020C0F6 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC80A21A81080A0020C0F6 /* SettingCell.swift */; };
+		CDAC80A51A8108410020C0F6 /* IACTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC80A41A8108410020C0F6 /* IACTextCell.swift */; };
+		CDAC80A71A810A5F0020C0F6 /* IACToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC80A61A810A5F0020C0F6 /* IACToggleCell.swift */; };
+		CDAC80A91A8111760020C0F6 /* IACSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC80A81A8111760020C0F6 /* IACSliderCell.swift */; };
+		CDAC80AB1A8116770020C0F6 /* IACMultiValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC80AA1A8116770020C0F6 /* IACMultiValueCell.swift */; };
+		CDAC80AD1A8117680020C0F6 /* IACChildSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC80AC1A8117680020C0F6 /* IACChildSettingsCell.swift */; };
+		CDAC80B81A8165D70020C0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC80B71A8165D70020C0F6 /* AppDelegate.swift */; };
+		CDAC80BF1A8165D70020C0F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDAC80BE1A8165D70020C0F6 /* Images.xcassets */; };
+		CDAC80C21A8165D70020C0F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAC80C01A8165D70020C0F6 /* LaunchScreen.xib */; };
+		CDAC80CE1A8165D70020C0F6 /* IACDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC80CD1A8165D70020C0F6 /* IACDemoTests.swift */; };
+		CDAC80D71A8166A30020C0F6 /* IAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C11B31A805A07004D06CA /* IAC.storyboard */; };
+		CDAC80D81A8166D10020C0F6 /* inappconfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7C11951A8059C1004D06CA /* inappconfig.framework */; };
+		CDC70DCA1A9E4F6A00391696 /* IACDataMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC70DC91A9E4F6A00391696 /* IACDataMediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +40,52 @@
 			remoteGlobalIDString = CD7C11941A8059C1004D06CA;
 			remoteInfo = inappconfig;
 		};
+		CDAC80C81A8165D70020C0F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD7C118C1A8059C1004D06CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDAC80B21A8165D70020C0F6;
+			remoteInfo = IACDemo;
+		};
+		CDAC80D51A8166940020C0F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD7C118C1A8059C1004D06CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD7C11941A8059C1004D06CA;
+			remoteInfo = inappconfig;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD06ADF31A82543A006EF249 /* IACPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IACPickerViewController.swift; sourceTree = "<group>"; };
+		CD0A6BBB1A81AF9500C2E786 /* Top.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Top.plist; sourceTree = "<group>"; };
+		CD0A6BBD1A81B17900C2E786 /* ChildSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChildSettings.plist; sourceTree = "<group>"; };
 		CD7C11951A8059C1004D06CA /* inappconfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = inappconfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7C11991A8059C1004D06CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7C119A1A8059C1004D06CA /* inappconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = inappconfig.h; sourceTree = "<group>"; };
 		CD7C11A01A8059C1004D06CA /* inappconfigTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inappconfigTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7C11A61A8059C1004D06CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7C11A71A8059C1004D06CA /* inappconfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inappconfigTests.swift; sourceTree = "<group>"; };
+		CD7C11B11A8059F4004D06CA /* IACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IACViewController.swift; sourceTree = "<group>"; };
+		CD7C11B31A805A07004D06CA /* IAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IAC.storyboard; sourceTree = "<group>"; };
+		CD7C11B51A805AEC004D06CA /* SettingsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDataSource.swift; sourceTree = "<group>"; };
+		CD7C11B71A805C1F004D06CA /* SettingsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLoader.swift; sourceTree = "<group>"; };
+		CDAC80A21A81080A0020C0F6 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		CDAC80A41A8108410020C0F6 /* IACTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IACTextCell.swift; sourceTree = "<group>"; };
+		CDAC80A61A810A5F0020C0F6 /* IACToggleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IACToggleCell.swift; sourceTree = "<group>"; };
+		CDAC80A81A8111760020C0F6 /* IACSliderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IACSliderCell.swift; sourceTree = "<group>"; };
+		CDAC80AA1A8116770020C0F6 /* IACMultiValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IACMultiValueCell.swift; sourceTree = "<group>"; };
+		CDAC80AC1A8117680020C0F6 /* IACChildSettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IACChildSettingsCell.swift; sourceTree = "<group>"; };
+		CDAC80AE1A81195F0020C0F6 /* play.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = play.playground; sourceTree = SOURCE_ROOT; };
+		CDAC80B31A8165D70020C0F6 /* IACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDAC80B61A8165D70020C0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDAC80B71A8165D70020C0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDAC80BE1A8165D70020C0F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CDAC80C11A8165D70020C0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CDAC80C71A8165D70020C0F6 /* IACDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IACDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDAC80CC1A8165D70020C0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDAC80CD1A8165D70020C0F6 /* IACDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IACDemoTests.swift; sourceTree = "<group>"; };
+		CDC70DC91A9E4F6A00391696 /* IACDataMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IACDataMediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,14 +104,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDAC80B01A8165D70020C0F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDAC80D81A8166D10020C0F6 /* inappconfig.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDAC80C41A8165D70020C0F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD0A6BB91A81AF6900C2E786 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A6BBB1A81AF9500C2E786 /* Top.plist */,
+				CD0A6BBD1A81B17900C2E786 /* ChildSettings.plist */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
 		CD7C118B1A8059C1004D06CA = {
 			isa = PBXGroup;
 			children = (
 				CD7C11971A8059C1004D06CA /* inappconfig */,
 				CD7C11A41A8059C1004D06CA /* inappconfigTests */,
+				CDAC80B41A8165D70020C0F6 /* IACDemo */,
+				CDAC80CA1A8165D70020C0F6 /* IACDemoTests */,
 				CD7C11961A8059C1004D06CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +147,8 @@
 			children = (
 				CD7C11951A8059C1004D06CA /* inappconfig.framework */,
 				CD7C11A01A8059C1004D06CA /* inappconfigTests.xctest */,
+				CDAC80B31A8165D70020C0F6 /* IACDemo.app */,
+				CDAC80C71A8165D70020C0F6 /* IACDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,8 +156,15 @@
 		CD7C11971A8059C1004D06CA /* inappconfig */ = {
 			isa = PBXGroup;
 			children = (
+				CDAC80A11A8107EF0020C0F6 /* cells */,
 				CD7C119A1A8059C1004D06CA /* inappconfig.h */,
+				CD7C11B11A8059F4004D06CA /* IACViewController.swift */,
+				CD06ADF31A82543A006EF249 /* IACPickerViewController.swift */,
+				CD7C11B51A805AEC004D06CA /* SettingsDataSource.swift */,
+				CD7C11B71A805C1F004D06CA /* SettingsLoader.swift */,
+				CD7C11B31A805A07004D06CA /* IAC.storyboard */,
 				CD7C11981A8059C1004D06CA /* Supporting Files */,
+				CDC70DC91A9E4F6A00391696 /* IACDataMediator.swift */,
 			);
 			path = inappconfig;
 			sourceTree = "<group>";
@@ -98,6 +190,57 @@
 			isa = PBXGroup;
 			children = (
 				CD7C11A61A8059C1004D06CA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDAC80A11A8107EF0020C0F6 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC80A21A81080A0020C0F6 /* SettingCell.swift */,
+				CDAC80A41A8108410020C0F6 /* IACTextCell.swift */,
+				CDAC80AE1A81195F0020C0F6 /* play.playground */,
+				CDAC80A61A810A5F0020C0F6 /* IACToggleCell.swift */,
+				CDAC80A81A8111760020C0F6 /* IACSliderCell.swift */,
+				CDAC80AA1A8116770020C0F6 /* IACMultiValueCell.swift */,
+				CDAC80AC1A8117680020C0F6 /* IACChildSettingsCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		CDAC80B41A8165D70020C0F6 /* IACDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A6BB91A81AF6900C2E786 /* examples */,
+				CDAC80B71A8165D70020C0F6 /* AppDelegate.swift */,
+				CDAC80BE1A8165D70020C0F6 /* Images.xcassets */,
+				CDAC80C01A8165D70020C0F6 /* LaunchScreen.xib */,
+				CDAC80B51A8165D70020C0F6 /* Supporting Files */,
+			);
+			path = IACDemo;
+			sourceTree = "<group>";
+		};
+		CDAC80B51A8165D70020C0F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC80B61A8165D70020C0F6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDAC80CA1A8165D70020C0F6 /* IACDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC80CD1A8165D70020C0F6 /* IACDemoTests.swift */,
+				CDAC80CB1A8165D70020C0F6 /* Supporting Files */,
+			);
+			path = IACDemoTests;
+			sourceTree = "<group>";
+		};
+		CDAC80CB1A8165D70020C0F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC80CC1A8165D70020C0F6 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +295,42 @@
 			productReference = CD7C11A01A8059C1004D06CA /* inappconfigTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CDAC80B21A8165D70020C0F6 /* IACDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDAC80CF1A8165D70020C0F6 /* Build configuration list for PBXNativeTarget "IACDemo" */;
+			buildPhases = (
+				CDAC80AF1A8165D70020C0F6 /* Sources */,
+				CDAC80B01A8165D70020C0F6 /* Frameworks */,
+				CDAC80B11A8165D70020C0F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDAC80D61A8166940020C0F6 /* PBXTargetDependency */,
+			);
+			name = IACDemo;
+			productName = IACDemo;
+			productReference = CDAC80B31A8165D70020C0F6 /* IACDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDAC80C61A8165D70020C0F6 /* IACDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDAC80D21A8165D70020C0F6 /* Build configuration list for PBXNativeTarget "IACDemoTests" */;
+			buildPhases = (
+				CDAC80C31A8165D70020C0F6 /* Sources */,
+				CDAC80C41A8165D70020C0F6 /* Frameworks */,
+				CDAC80C51A8165D70020C0F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDAC80C91A8165D70020C0F6 /* PBXTargetDependency */,
+			);
+			name = IACDemoTests;
+			productName = IACDemoTests;
+			productReference = CDAC80C71A8165D70020C0F6 /* IACDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,6 +346,13 @@
 					CD7C119F1A8059C1004D06CA = {
 						CreatedOnToolsVersion = 6.2;
 					};
+					CDAC80B21A8165D70020C0F6 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					CDAC80C61A8165D70020C0F6 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = CDAC80B21A8165D70020C0F6;
+					};
 				};
 			};
 			buildConfigurationList = CD7C118F1A8059C1004D06CA /* Build configuration list for PBXProject "inappconfig" */;
@@ -175,6 +361,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CD7C118B1A8059C1004D06CA;
 			productRefGroup = CD7C11961A8059C1004D06CA /* Products */;
@@ -183,6 +370,8 @@
 			targets = (
 				CD7C11941A8059C1004D06CA /* inappconfig */,
 				CD7C119F1A8059C1004D06CA /* inappconfigTests */,
+				CDAC80B21A8165D70020C0F6 /* IACDemo */,
+				CDAC80C61A8165D70020C0F6 /* IACDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -192,10 +381,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7C11B41A805A07004D06CA /* IAC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CD7C119E1A8059C1004D06CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDAC80B11A8165D70020C0F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDAC80D71A8166A30020C0F6 /* IAC.storyboard in Resources */,
+				CD0A6BBE1A81B17900C2E786 /* ChildSettings.plist in Resources */,
+				CD0A6BBC1A81AF9500C2E786 /* Top.plist in Resources */,
+				CDAC80C21A8165D70020C0F6 /* LaunchScreen.xib in Resources */,
+				CDAC80BF1A8165D70020C0F6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDAC80C51A8165D70020C0F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -209,6 +418,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDAC80AD1A8117680020C0F6 /* IACChildSettingsCell.swift in Sources */,
+				CDAC80A91A8111760020C0F6 /* IACSliderCell.swift in Sources */,
+				CD06ADF41A82543A006EF249 /* IACPickerViewController.swift in Sources */,
+				CD7C11B81A805C1F004D06CA /* SettingsLoader.swift in Sources */,
+				CDAC80A51A8108410020C0F6 /* IACTextCell.swift in Sources */,
+				CD7C11B21A8059F4004D06CA /* IACViewController.swift in Sources */,
+				CDC70DCA1A9E4F6A00391696 /* IACDataMediator.swift in Sources */,
+				CDAC80A71A810A5F0020C0F6 /* IACToggleCell.swift in Sources */,
+				CDAC80A31A81080A0020C0F6 /* SettingCell.swift in Sources */,
+				CD7C11B61A805AEC004D06CA /* SettingsDataSource.swift in Sources */,
+				CDAC80AB1A8116770020C0F6 /* IACMultiValueCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +440,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDAC80AF1A8165D70020C0F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDAC80B81A8165D70020C0F6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDAC80C31A8165D70020C0F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDAC80CE1A8165D70020C0F6 /* IACDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -228,7 +464,28 @@
 			target = CD7C11941A8059C1004D06CA /* inappconfig */;
 			targetProxy = CD7C11A21A8059C1004D06CA /* PBXContainerItemProxy */;
 		};
+		CDAC80C91A8165D70020C0F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDAC80B21A8165D70020C0F6 /* IACDemo */;
+			targetProxy = CDAC80C81A8165D70020C0F6 /* PBXContainerItemProxy */;
+		};
+		CDAC80D61A8166940020C0F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD7C11941A8059C1004D06CA /* inappconfig */;
+			targetProxy = CDAC80D51A8166940020C0F6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDAC80C01A8165D70020C0F6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDAC80C11A8165D70020C0F6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CD7C11A91A8059C1004D06CA /* Debug */ = {
@@ -319,6 +576,7 @@
 		CD7C11AC1A8059C1004D06CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +586,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CD7C11AD1A8059C1004D06CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +636,64 @@
 			};
 			name = Release;
 		};
+		CDAC80D01A8165D70020C0F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IACDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CDAC80D11A8165D70020C0F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IACDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CDAC80D31A8165D70020C0F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IACDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IACDemo.app/IACDemo";
+			};
+			name = Debug;
+		};
+		CDAC80D41A8165D70020C0F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IACDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IACDemo.app/IACDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -395,6 +713,7 @@
 				CD7C11AD1A8059C1004D06CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD7C11AE1A8059C1004D06CA /* Build configuration list for PBXNativeTarget "inappconfigTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +722,25 @@
 				CD7C11B01A8059C1004D06CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDAC80CF1A8165D70020C0F6 /* Build configuration list for PBXNativeTarget "IACDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDAC80D01A8165D70020C0F6 /* Debug */,
+				CDAC80D11A8165D70020C0F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDAC80D21A8165D70020C0F6 /* Build configuration list for PBXNativeTarget "IACDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDAC80D31A8165D70020C0F6 /* Debug */,
+				CDAC80D41A8165D70020C0F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>First group</string>
+		</dict>
+		<dict>
+			<key>Key</key>
+			<string>testTextKey</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Example Text</string>
+			<key>DefaultValue</key>
+			<string>default value</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Second group</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>A toggle</string>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Key</key>
+			<string>testToggleKey</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Multi</string>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Key</key>
+			<string>testMultiKey</string>
+			<key>DefaultValue</key>
+			<string>b</string>
+			<key>Values</key>
+			<array>
+				<string>A</string>
+				<string>B</string>
+				<string>C</string>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>A</string>
+				<string>B</string>
+				<string>C</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>A child example</string>
+			<key>File</key>
+			<string>ChildSettings</string>
+		</dict>
+	</array>
+</dict>
+</plist>
