@@ -78,7 +78,7 @@ public class SettingsDataSource : NSObject, UITableViewDataSource {
         if settings != nil {
             let sectionData = settings![ section]
             
-            result = countElements( sectionData)
+            result = count( sectionData)
         }
         
         return result
@@ -87,7 +87,7 @@ public class SettingsDataSource : NSObject, UITableViewDataSource {
     
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if settings != nil {
-            return countElements( settings!)
+            return count( settings!)
         }
         else {
             return 0

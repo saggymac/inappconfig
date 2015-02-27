@@ -10,53 +10,47 @@ import Foundation
 import UIKit
 
 
-
 public class IACViewController : UIViewController, UITableViewDelegate {
-    public var dataSource: SettingsDataSource!
-    
-    lazy var defaults: NSUserDefaults = {
-       return NSUserDefaults.standardUserDefaults()
-    }()
+    var dataSource: SettingsDataSource!
+    var delegate:IACPersistanceDelegate?
 
     @IBOutlet var tableView: UITableView!
     
-    
     public override func awakeFromNib() {
-
     }
     
     
     public override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
         self.tableView.reloadData()
     }
     
     
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
         self.tableView.dataSource = dataSource
         self.tableView.delegate = self
-        
     }
     
-    
-    //
-    // TODO: need to rework this so that defaults is not known to this view controller
-    //
+    //Open a Picker View for the given plist setting, can be multi-pick or single-pick
     func openPickerForIndexPath( indexPath: NSIndexPath, setting: Setting, multi: Bool ) {
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pickerViewController") as IACPickerViewController
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pickerViewController") as! IACPickerViewController
         
         vc.items = setting[ "Titles"] as? Array<String>
         vc.allowMultipleSelections = multi
-        
-        // TODO: also need to fallback to defaults if there is nothing in NSUserDefaults
+        vc.delegate = delegate
+
         
         if let key = setting[ "Key"] as? String {
             vc.key = key
-            if let currentValues = defaults.valueForKey( key) as? Array<String> {
-                vc.selectedItems = currentValues
+            let vals = delegate!.loadDefaultsFromStorageForKeys([key])
+            if let selected = vals[key] as? Array<String> {
+                //load from storage
+                vc.selectedItems = selected
+            } else {
+                //load from defaults
+                let selected = setting["DefaultValue"] as! Array<String>
+                vc.selectedItems = selected
             }
         }
         
@@ -66,7 +60,7 @@ public class IACViewController : UIViewController, UITableViewDelegate {
 
     // TODO: this needs to be moved from here
     func openChildPaneForIndexPath( indexPath: NSIndexPath, setting: Setting ) {
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("settingsViewController") as IACViewController
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("settingsViewController") as! IACViewController
         
         if let plistName = setting[ "File"] as? String {
             if let path = NSBundle.mainBundle().pathForResource( plistName, ofType: "plist") {
@@ -86,7 +80,7 @@ public class IACViewController : UIViewController, UITableViewDelegate {
         
         if let setting = dataSource.setting( indexPath) {
             
-            let type = setting[ "Type"] as String
+            let type = setting[ "Type"] as! String
             
             switch type {
                 
@@ -104,9 +98,9 @@ public class IACViewController : UIViewController, UITableViewDelegate {
                 
             }
         }
-            
- 
-        
     }
     
+    public override func viewWillDisappear(animated: Bool) {
+        //
+    }
 }

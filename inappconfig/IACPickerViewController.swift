@@ -19,7 +19,8 @@ class IACPickerViewController : UITableViewController {
     var key: String?
     var selectedItems = [String]()
     var allowMultipleSelections = false
-    
+    var delegate:IACPersistanceDelegate?
+
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +47,7 @@ class IACPickerViewController : UITableViewController {
     
     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier( "pickerCell") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier( "pickerCell") as! UITableViewCell
         
         if let i = items {
             let value = i[ indexPath.row]
@@ -79,7 +80,9 @@ class IACPickerViewController : UITableViewController {
     }
 
     override func viewWillDisappear(animated: Bool) {
-        IACDataMediator.saveSelectedItemsForKey(self.selectedItems, key: self.key!)
+        var changes = [String:AnyObject]()
+        changes[self.key!] = selectedItems
+        delegate?.persistChangesToStorage(changes)
     }
     
 }

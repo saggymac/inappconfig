@@ -44,7 +44,9 @@
 			<key>Key</key>
 			<string>testMultiKey</string>
 			<key>DefaultValue</key>
-			<string>b</string>
+			<array>
+				<string>B</string>
+			</array>
 			<key>Values</key>
 			<array>
 				<string>A</string>
