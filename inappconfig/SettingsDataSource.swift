@@ -20,11 +20,11 @@ public typealias Settings = Array<Setting>
 // An instance of Settings Data Source will encompass a "level" of a Settings plist config
 //
 public class SettingsDataSource : NSObject, UITableViewDataSource {
+    //Delegate for the tableview cells, not delegate for the data source
+    var cellDelegate:IACPersistanceDelegate
 
     var rawSettings: Settings? = nil
     var settings: Array<Settings>? = nil
-    var defaults: NSUserDefaults
-    
     
     func processSettingsIntoGroups( settings: Settings ) -> Array<Settings>? {
         var result = Array<Settings>()
@@ -54,9 +54,8 @@ public class SettingsDataSource : NSObject, UITableViewDataSource {
     }
     
     
-    public init( propertyListFile: String, defaults: NSUserDefaults ) {
-        
-        self.defaults = defaults
+    public init( propertyListFile: String, cellDelegate delegate:IACPersistanceDelegate) {
+        self.cellDelegate = delegate
         
         super.init()
         
@@ -78,7 +77,7 @@ public class SettingsDataSource : NSObject, UITableViewDataSource {
         if settings != nil {
             let sectionData = settings![ section]
             
-            result = countElements( sectionData)
+            result = count( sectionData)
         }
         
         return result
@@ -87,7 +86,7 @@ public class SettingsDataSource : NSObject, UITableViewDataSource {
     
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if settings != nil {
-            return countElements( settings!)
+            return count( settings!)
         }
         else {
             return 0
@@ -118,7 +117,7 @@ public class SettingsDataSource : NSObject, UITableViewDataSource {
         if let pref = setting( indexPath) {
             if let type = pref[ "Type"] as? String {
                 if let cell = tableView.dequeueReusableCellWithIdentifier( reuseIdentifierForSettingType( type)) as? SettingCell {
-                    cell.configureWithSetting( pref, defaults:defaults)
+                    cell.configureWithSetting( pref, delegate:cellDelegate)
                     resultCell = cell
                 }
             }

@@ -9,12 +9,9 @@
 import Foundation
 import UIKit
 
-
+/*
+The cell that, when a user taps it, will open up a child settings view
+*/
 class IACChildSettingsCell : SettingCell {
     
-    
-    override func configureWithSetting(setting: Setting, defaults: NSUserDefaults) {
-        super.configureWithSetting( setting, defaults:defaults)
-        
-    }
 }

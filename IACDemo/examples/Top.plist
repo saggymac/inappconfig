@@ -18,7 +18,7 @@
 			<key>Title</key>
 			<string>Example Text</string>
 			<key>DefaultValue</key>
-			<string>default value</string>
+			<string>Sample Text</string>
 		</dict>
 		<dict>
 			<key>Title</key>
@@ -44,7 +44,9 @@
 			<key>Key</key>
 			<string>testMultiKey</string>
 			<key>DefaultValue</key>
-			<string>b</string>
+			<array>
+				<string>B</string>
+			</array>
 			<key>Values</key>
 			<array>
 				<string>A</string>

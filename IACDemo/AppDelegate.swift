@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var navController: UINavigationController?
-    var rootVC: IACViewController?
+    var rootVC: IACRootViewController?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -24,14 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let sb = UIStoryboard(name: "IAC", bundle: nil)
         
-        rootVC = sb.instantiateViewControllerWithIdentifier("settingsViewController") as? IACViewController
+        rootVC = sb.instantiateViewControllerWithIdentifier("rootViewController") as? IACRootViewController
         
         if (rootVC != nil) {
-            if let path = NSBundle.mainBundle().pathForResource("Top", ofType: "plist") {
-                let ds = SettingsDataSource( propertyListFile: path, defaults: NSUserDefaults.standardUserDefaults())
-                rootVC!.dataSource = ds;
-                navController = UINavigationController(rootViewController: rootVC!)                
-            }
+            navController = UINavigationController(rootViewController: rootVC!)
         }
         
         self.window?.rootViewController = nil

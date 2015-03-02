@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="nee-dW-jC6">
+            <objects>
+                <viewController storyboardIdentifier="rootViewController" id="1zP-Kx-OaF" customClass="IACRootViewController" customModule="inappconfig" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AjY-XJ-WIo"/>
+                        <viewControllerLayoutGuide type="bottom" id="oIO-W6-w7O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VOQ-PW-J9e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZg-5O-2Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-465" y="-504"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="EID-lU-c6g">
             <objects>
@@ -33,6 +51,9 @@
                                             <rect key="frame" x="133" y="7" width="444" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="persistSelfInfo" destination="4ye-OM-l45" eventType="editingChanged" id="Mad-ta-gKR"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>
@@ -55,6 +76,9 @@
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDU-b5-ZcM">
                                             <rect key="frame" x="528" y="6" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="persistSelfInfo" destination="DP4-op-fdR" eventType="valueChanged" id="TaA-PZ-vQd"/>
+                                            </connections>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB8-LJ-sdT">
                                             <rect key="frame" x="23" y="11" width="490" height="21"/>
@@ -111,6 +135,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="mQD-Ve-fhA"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="persistSelfInfo" destination="6dO-oP-bLD" eventType="valueChanged" id="S5I-Wl-QIv"/>
+                                            </connections>
                                         </slider>
                                     </subviews>
                                     <constraints>
@@ -262,6 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxP-zp-0NV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="904" y="-504"/>
         </scene>
     </scenes>
 </document>
