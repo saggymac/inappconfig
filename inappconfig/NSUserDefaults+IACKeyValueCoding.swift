@@ -8,6 +8,12 @@
 
 import Foundation
 
+
+/*
+Extension of NSUserDefaults so that it implements IACKeyValueCoding
+allowing it to be referred to as type IACKeyValueCoding.
+It already implements the methods required, so no additional code needed.
+*/
 extension NSUserDefaults:IACKeyValueCoding {
     
 }

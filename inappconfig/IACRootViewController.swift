@@ -17,16 +17,16 @@ public class IACRootViewController : UIViewController {
     }
     
     public func spawnDataViewRoot() {
-        
+        var delegate = IACPersistenceMediator.makePersistenceMediatorWithStandardDefaults()
+
         let sb = UIStoryboard(name: "IAC", bundle: nil)
         vc = sb.instantiateViewControllerWithIdentifier("settingsViewController") as? IACViewController
-        
         if (vc != nil) {
             if let path = NSBundle.mainBundle().pathForResource("Top", ofType: "plist") {
                 //TODO: Make this not use the standardUserDefaults
-                let ds = SettingsDataSource( propertyListFile: path, defaults: NSUserDefaults.standardUserDefaults())
+                let ds = SettingsDataSource( propertyListFile: path, cellDelegate: delegate)
                 vc!.dataSource = ds
-                vc!.delegate = IACPersistenceMediator.makePersistenceMediatorWithStandardDefaults()
+                vc!.delegate = delegate
             }
         }
         self.navigationController?.pushViewController(vc!, animated: false)

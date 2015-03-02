@@ -11,21 +11,23 @@ import UIKit
 
 
 class IACTextCell : SettingCell {
-    
     @IBOutlet var valueField: UITextField!
     
-    override func configureWithSetting(setting: Setting, defaults: NSUserDefaults) {
-        
-        super.configureWithSetting( setting, defaults:defaults)
-        
-        
-        // TODO: Check "Key" for value
-        // Else, check "DefaultValue" and use that
-        
-        if let currentValue = setting[ ""] as? String {
-            valueField.text = currentValue
+    override func loadDefaults() {
+        self.key = self.setting["Key"] as! String
+        if let defaultVal: AnyObject = delegate?.loadDefaultsFromStorageForKey(self.key) {
+            valueField.text = defaultVal as! String
         }
-        
+        else {
+            if let defaultVal = setting["DefaultValue"] as? String {
+                valueField.text = defaultVal
+            }
+        }
+    }
+    
+    override func persistSelfInfo() {
+        var changes:[String:AnyObject?] = [self.key:valueField.text]
+        delegate?.persistChangesToStorage(changes)
     }
     
     

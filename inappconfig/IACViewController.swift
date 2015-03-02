@@ -43,8 +43,8 @@ public class IACViewController : UIViewController, UITableViewDelegate {
         
         if let key = setting[ "Key"] as? String {
             vc.key = key
-            let vals = delegate!.loadDefaultsFromStorageForKeys([key])
-            if let selected = vals[key] as? Array<String> {
+            let val: AnyObject? = delegate!.loadDefaultsFromStorageForKey(key)
+            if let selected = val as? Array<String> {
                 //load from storage
                 vc.selectedItems = selected
             } else {
@@ -64,7 +64,7 @@ public class IACViewController : UIViewController, UITableViewDelegate {
         
         if let plistName = setting[ "File"] as? String {
             if let path = NSBundle.mainBundle().pathForResource( plistName, ofType: "plist") {
-                let ds = SettingsDataSource( propertyListFile: path, defaults:NSUserDefaults.standardUserDefaults() )
+                let ds = SettingsDataSource( propertyListFile: path, cellDelegate: delegate!)
                 vc.dataSource = ds;
             }
         }
@@ -98,9 +98,5 @@ public class IACViewController : UIViewController, UITableViewDelegate {
                 
             }
         }
-    }
-    
-    public override func viewWillDisappear(animated: Bool) {
-        //
     }
 }

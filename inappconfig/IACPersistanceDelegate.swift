@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IACPersistanceDelegate {
+public protocol IACPersistanceDelegate {
     func persistChangesToStorage(changes:[String:AnyObject?])
-    func loadDefaultsFromStorageForKeys(keys:[String]) -> [String:AnyObject?]
+    func loadDefaultsFromStorageForKey(key:String) -> AnyObject?
 }

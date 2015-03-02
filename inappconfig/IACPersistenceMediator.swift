@@ -18,6 +18,9 @@ Allow persistence of cached changes in NSUserDefaults
 
 public class IACPersistenceMediator:IACPersistanceDelegate {
     
+    private var storage:IACKeyValueCoding
+
+    
     class func makePersistenceMediatorWithStandardDefaults() -> IACPersistenceMediator{
         return IACPersistenceMediator()
     }
@@ -40,9 +43,6 @@ public class IACPersistenceMediator:IACPersistanceDelegate {
         self.storage = storage
     }
     
-    private var storage:IACKeyValueCoding
-  
-    
     public func persistChangesToStorage(changes:[String:AnyObject?]) {
         for change in changes {
             storage.setValue(change.1, forKey: change.0)
@@ -51,11 +51,10 @@ public class IACPersistenceMediator:IACPersistanceDelegate {
     
     //Load the specified defaults from the cache
     //Some defaults may not exist, be careful when unwrapping defaults
-    public func loadDefaultsFromStorageForKeys(keys:[String]) -> [String:AnyObject?] {
-        var retVal = [String:AnyObject?]()
-        for key in keys {
-            retVal[key] = storage.valueForKey(key)
-        }
+    public func loadDefaultsFromStorageForKey(key:String) -> AnyObject? {
+        var retVal:AnyObject?
+        retVal = storage.valueForKey(key)
+        
         return retVal
     }
     
